@@ -1,0 +1,41 @@
+.toastVar__a{
+    --toastBackColor: var(--colorFore);
+    --toastForeColor: var(--colorBack);
+}
+
+.toastPosition__tl{
+    --toastFlexAlign: flex-start;
+    --toastFlexJustify: flex-start;
+}
+.toastPosition__tc{
+    --toastFlexAlign: flex-start;
+    --toastFlexJustify: center;
+}
+.toastPosition__tr{
+    --toastFlexAlign: flex-start;
+    --toastFlexJustify: flex-end;
+}
+.toastPosition__cl{
+    --toastFlexAlign: center;
+    --toastFlexJustify: flex-start;
+}
+.toastPosition__cc{
+    --toastFlexAlign: center;
+    --toastFlexJustify: center;
+}
+.toastPosition__cr{
+    --toastFlexAlign: center;
+    --toastFlexJustify: flex-end;
+}
+.toastPosition__bl{
+    --toastFlexAlign: flex-end;
+    --toastFlexJustify: flex-start;
+}
+.toastPosition__bc{
+    --toastFlexAlign: flex-end;
+    --toastFlexJustify: center;
+}
+.toastPosition__br{
+    --toastFlexAlign: flex-end;
+    --toastFlexJustify: flex-end;
+}

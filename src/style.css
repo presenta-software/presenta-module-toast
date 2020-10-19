@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --toastPadding: .5rem;
+    --toastBackColor: black;
+    --toastForeColor: white;
+    --toastFlexAlign: flex-start;
+    --toastFlexJustify: center;
+    --toastFontSize: 18px;
+    --toastTextAlign: center;
+    --toastShadow: 0 0 15px rgba(0,0,0,.3);
+}
+
+.toast{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    padding: 3rem;
+    align-items: var(--toastFlexAlign);
+    justify-content: var(--toastFlexJustify);
+    pointer-events: none;
+}
+
+.strip{
+    padding: var(--toastPadding);
+    background: var(--toastBackColor);
+    color: var(--toastForeColor);
+    box-shadow: var(--toastShadow);
+    font-family: var(--fontHeading);
+    font-size: var(--toastFontSize);
+    text-align: var(--toastTextAlign);
+    pointer-events: all;
+}
+
+.strip p{
+    margin: 0;
+}

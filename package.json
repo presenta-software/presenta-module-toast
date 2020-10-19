@@ -1,0 +1,30 @@
+{
+  "name": "@presenta/module-toast",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "unpkg": "dist/presenta-module-toast.min.js",
+  "module": "dist/presenta-module-toast.min.js",
+  "scripts": {
+    "start": "rollup -c --watch",
+    "bump": "npm run build && git add -u && git commit -m \"bump release\" && npm version patch && git push && npm publish",
+    "test": "browser-sync start -s -f \"dist/*, test/*\" --startPath test",
+    "build": "rollup -c"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@rollup/plugin-babel": "^5.0.4",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.1.0",
+    "autoprefixer": "^9.8.0",
+    "cssnano": "^4.1.10",
+    "node-sass": "^4.14.1",
+    "rollup-plugin-postcss": "^3.1.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "standard": "^14.3.4"
+  },
+  "dependencies": {}
+}

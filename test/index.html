@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PresentaModuleToast</title>
+    <script src="../dist/presenta-module-toast.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        .scene{
+            width: 800px;
+            height: 500px;
+            background-color: aqua;
+
+            --colorBack: blue;
+            --colorFore: yellow;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="scene"></div>
+
+    <script>
+        var scene = {
+            toast:{
+                text: 'Ciao <b>Come</b> stai?',
+                enter: 'auto', // 1, 2, 3, 4, 5, click, a, b, step
+                delay:2,
+                exit: 'click'
+            }
+        }
+        new PresentaModuleToast(document.querySelector('.scene'), null, scene)
+    </script>
+</body>
+</html>
