@@ -23,6 +23,7 @@ export default {
   plugins: [
     resolve(),
     babel({
+      babelHelpers: 'bundled',
       exclude: 'node_modules/**'
     }),
     terser(),

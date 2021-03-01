@@ -27,7 +27,7 @@ const module = function (sceneElement, modConfig, sceneConfig) {
     sceneElement.removeEventListener('click', show)
 
     const child = `<div class="${css.toast}">
-      <div class="${css.strip} animate__animated animate__${enterEffect} animate__delay-${delay}s">${ob.text}</div>
+      <div class="${css.strip} animate__animated animate__${enterEffect}">${ob.text}</div>
     </div>`
 
     dom = parser.parseFromString(child, 'text/html').body.childNodes[0]
@@ -51,8 +51,11 @@ const module = function (sceneElement, modConfig, sceneConfig) {
   const hide = () => {
     if (dom) {
       const strip = dom.querySelector('.' + css.strip)
-      strip.classList.remove(`animate__${enterEffect}`, `animate__delay-${delay}s`)
+      strip.classList.remove(`animate__${enterEffect}`)
       strip.classList.add(`animate__${exitEffect}`)
+      setTimeout(() => {
+        dom.remove()
+      }, 750)
     }
   }
 
@@ -66,7 +69,7 @@ const module = function (sceneElement, modConfig, sceneConfig) {
       break
 
     case 'auto':
-      show()
+      setTimeout(show, delay * 1000)
       break
 
     default:
