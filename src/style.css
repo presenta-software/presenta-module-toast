@@ -8,7 +8,7 @@
     --toastForeColor: white;
     --toastFlexAlign: flex-start;
     --toastFlexJustify: center;
-    --toastFontSize: 18px;
+    --toastFontSize: 1.5rem;
     --toastTextAlign: center;
     --toastShadow: 0 0 15px rgba(0,0,0,.3);
 }

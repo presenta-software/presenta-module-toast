@@ -27,9 +27,8 @@
         var scene = {
             toast:{
                 text: 'Ciao <b>Come</b> stai?',
-                enter: 'auto', // 1, 2, 3, 4, 5, click, a, b, step
-                delay:2,
-                exit: 'click'
+                enter: 'auto', // click, <char>, <integer>
+                exit: 2, // click, <integer>
             }
         }
         new PresentaModuleToast(document.querySelector('.scene'), null, scene)
