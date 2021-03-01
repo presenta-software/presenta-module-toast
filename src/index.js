@@ -7,6 +7,8 @@ const module = function (sceneElement, modConfig, sceneConfig) {
   const ob = sceneConfig.toast
   if (!ob) return
 
+  const text = ob.text || ob
+
   const delay = parseInt(ob.enter) > 0 ? parseInt(ob.enter) : 0
   const duration = parseInt(ob.exit) > 0 ? parseInt(ob.exit) : 0
 
@@ -27,7 +29,7 @@ const module = function (sceneElement, modConfig, sceneConfig) {
     sceneElement.removeEventListener('click', show)
 
     const child = `<div class="${css.toast}">
-      <div class="${css.strip} animate__animated animate__${enterEffect}">${ob.text}</div>
+      <div class="${css.strip} animate__animated animate__${enterEffect}">${text}</div>
     </div>`
 
     dom = parser.parseFromString(child, 'text/html').body.childNodes[0]
