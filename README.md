@@ -2,45 +2,24 @@
 
 This module adds a little tip message to a scene.
 
-## Installation
+## Documentation
 
-Please read the installation istructions for official plugins [here](https://lib.presenta.cc/extend/#install-an-official-plugin) using this unique identifier: `module-toast`
+Full documentation can be found [here](https://lib.presenta.cc/plugins/modules/toast).
 
-## Usage
+## Contribute
 
-This module require an external CSS dependency, [animate.css](https://animate.style/), that needs to be included in the HTML document.
+### Development
 
-To activate this module use this setting:
+To start a development session:
 
-```js
-{
-    modules:{
-      toast:true
-    }
-}
-```
+	npm start
 
-Then, in the scene you want to display the message:
+To build a release:
 
-```js
-{
-	blocks:[...],
-	toast:{
-		text: 'Some message'
-	}
-}
-```
+	npm run build
 
+## Licence
 
-## Development
+This plugin is released under the [3-Clause BSD license](LICENSE).
 
-Run the watcher:
-
-    npm start
-
-and the local webserver
-
-    npm run test
-
-
-
+Copyright © 2020 Fabio Franchino, [https://fabiofranchino.com](https://fabiofranchino.com)
