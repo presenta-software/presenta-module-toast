@@ -3,21 +3,18 @@ import css from './style.css'
 
 const parser = new window.DOMParser()
 
-const module = function (sceneElement, modConfig, sceneConfig) {
-  const ob = sceneConfig.toast
-  if (!ob) return
+const module = function (sceneElement, modConfig) {
+  const text = modConfig.text || modConfig
 
-  const text = ob.text || ob
-
-  const delay = parseInt(ob.enter) > 0 ? parseInt(ob.enter) : 0
-  const duration = parseInt(ob.exit) > 0 ? parseInt(ob.exit) : 0
+  const delay = parseInt(modConfig.enter) > 0 ? parseInt(modConfig.enter) : 0
+  const duration = parseInt(modConfig.exit) > 0 ? parseInt(modConfig.exit) : 0
 
   let enter = 'auto'
-  if (ob.enter) enter = ob.enter
+  if (modConfig.enter) enter = modConfig.enter
   if (delay > 0) enter = 'auto'
 
   let exit = 'auto'
-  if (ob.exit === 'click') exit = 'click'
+  if (modConfig.exit === 'click') exit = 'click'
   if (duration > 0) exit = 'auto'
 
   let dom = null
@@ -62,7 +59,7 @@ const module = function (sceneElement, modConfig, sceneConfig) {
   }
 
   const showByKey = e => {
-    if (e.key === ob.enter) show()
+    if (e.key === enter) show()
   }
 
   switch (enter) {

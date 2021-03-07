@@ -24,14 +24,12 @@
     <div class="scene"></div>
 
     <script>
-        var scene = {
-            toast:{
-                text: 'Hello <b>There</b>! How are you?',
-                enter: 'click', // click, <char>, <integer>
-                exit: 2, // click, <integer>
-            }
+        var modConfig = {
+            text: 'Hello <b>There</b>! How are you?',
+            enter: 'click', // click, <char>, <integer>
+            exit: 2 // click, <integer>
         }
-        new PresentaModuleToast(document.querySelector('.scene'), null, scene)
+        new PresentaModuleToast(document.querySelector('.scene'), modConfig)
     </script>
 </body>
 </html>
