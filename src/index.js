@@ -30,7 +30,7 @@ const module = function (sceneElement, modConfig) {
     </div>`
 
     dom = parser.parseFromString(child, 'text/html').body.childNodes[0]
-    sceneElement.querySelector('.frontContainer').appendChild(dom)
+    sceneElement.querySelector('.moduleFrontWrapper').appendChild(dom)
 
     const strip = dom.querySelector('.' + css.strip)
     strip.addEventListener('click', (e) => {
